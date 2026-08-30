@@ -46,4 +46,3 @@ The game needs an interactive terminal at least 23 rows by 23 columns. It does n
 ## Safety notes
 
 The program is local-only and reads keyboard input while it is running. It does not create files, access the network, or execute shell commands. Quit with `Q` before closing a terminal window to leave the terminal display cleanly.
-
