@@ -69,7 +69,7 @@ def _validate_timeout(value):
 def _build_session():
     session = requests.Session()
     session.headers.update(
-        {"User-Agent": "MIATSUNO-Lab-pychaos-safe/1.0", "Accept": "*/*"}
+        {"User-Agent": "MIATSUNO-Lab-pyroom-safe/1.0", "Accept": "*/*"}
     )
     return session
 
