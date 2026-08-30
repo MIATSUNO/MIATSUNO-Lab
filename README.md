@@ -1,35 +1,43 @@
 # MIATSUNO-Lab
 
-Um laboratório público para ferramentas pequenas, úteis e sem frescura. Tem automação, segurança defensiva, utilitários de programação e umas ideias geek que não cabiam quietas na gaveta.
+Um laboratório público para ferramentas pequenas, úteis e sem frescura. Reúne automação, segurança defensiva, utilitários de programação, experiências geek e projetos legados.
 
-A regra da casa é simples: se o programa diz que fez alguma coisa, ele faz mesmo. Nada de botão cenográfico, dado inventado ou função com cara de “depois eu termino”.
+Cada entrada abaixo liga ao código e ao README correspondente. Os caminhos dos READMEs seguem o nome do projeto: `categoria/ferramenta/README.md`.
 
-## automação
+## Automação
 
-- `automation/file_sift.py` organiza arquivos de verdade, começa em modo de simulação segura e permite desfazer com manifesto.
-- `automation/site_watch.py` acompanha páginas HTTP(S), guarda estado, detecta mudanças e respeita ETag e Last-Modified.
-- `automation/backup_buddy.py` cria backups ZIP incrementais, verifica os arquivos e registra o que mudou.
+- [`automation/file_sift.py`](automation/file_sift.py) — organiza arquivos com simulação, manifesto e opção de desfazer. [Guia](automation/file_sift/README.md)
+- [`automation/site_watch.py`](automation/site_watch.py) — acompanha páginas HTTP(S), guarda estado e detecta mudanças. [Guia](automation/site_watch/README.md)
+- [`automation/backup_buddy.py`](automation/backup_buddy.py) — cria backups ZIP incrementais e verifica os arquivos. [Guia](automation/backup_buddy/README.md)
 
-## segurança defensiva
+## Segurança defensiva
 
-- `security/header_guard.py` confere cabeçalhos, cookies, redirecionamentos e sinais básicos de configuração HTTP.
-- `security/dependency_lens.py` consulta o OSV para procurar vulnerabilidades conhecidas nas dependências locais.
-- `security/pyroom.py` é a suíte de diagnóstico estilo Pyroom: 45 funções reais de coleta pública, DNS, HTTP, RDAP, certificados, APIs abertas e checagens de superfície. Use somente em sistemas e domínios que você possui ou tem autorização para testar.
+- [`security/header_guard.py`](security/header_guard.py) — confere cabeçalhos, cookies e redirecionamentos HTTP. [Guia](security/header_guard/README.md)
+- [`security/dependency_lens.py`](security/dependency_lens.py) — consulta o OSV para dependências locais. [Guia](security/dependency_lens/README.md)
+- [`security/pyroom.py`](security/pyroom.py) — executa 45 verificações HTTP somente de leitura, incluindo cabeçalhos, DNS, RDAP, certificados e documentos públicos. [Guia](security/pyroom/README.md)
 
-Não tem brute force, exploração, invasão, coleta de credenciais ou varredura irresponsável. Segurança boa não precisa fazer cosplay de vilão de filme ruim.
+Use as ferramentas de segurança apenas em sistemas e domínios próprios ou autorizados. Elas não fazem brute force, exploração, invasão, coleta de credenciais ou escrita de dados.
 
-## utilitários para quem programa
+## Utilitários para quem programa
 
-- `practical/env_doctor.py` dá uma olhada honesta no ambiente de desenvolvimento.
-- `practical/git_scribe.py` transforma histórico Git em notas de versão.
-- `practical/snippet_box.py` guarda, busca, importa e exporta snippets localmente.
+- [`practical/env_doctor.py`](practical/env_doctor.py) — inspeciona o ambiente de desenvolvimento. [Guia](practical/env_doctor/README.md)
+- [`practical/git_scribe.py`](practical/git_scribe.py) — transforma o estado e o histórico Git em um relatório factual. [Guia](practical/git_scribe/README.md)
+- [`practical/snippet_box.py`](practical/snippet_box.py) — guarda, busca, importa e exporta snippets localmente. [Guia](practical/snippet_box/README.md)
 
-## esquina geek
+## Geek
 
-- `geek/solar_ledger.py` consulta dados astronômicos reais e monta efemérides.
-- `geek/curiosity_terminal.py` busca fatos, piadas, números, citações e curiosidades em APIs públicas.
+- [`geek/solar_ledger.py`](geek/solar_ledger.py) — consulta dados astronômicos e monta efemérides. [Guia](geek/solar_ledger/README.md)
+- [`geek/curiosity_terminal.py`](geek/curiosity_terminal.py) — busca fatos, piadas, números, citações e curiosidades em APIs públicas. [Guia](geek/curiosity_terminal/README.md)
 
-## como usar
+## Legado
+
+Os projetos mantidos por compatibilidade ficam em `legacy/`, cada um em seu próprio diretório:
+
+- [`legacy/host_diagnostics/host_diagnostics.py`](legacy/host_diagnostics/host_diagnostics.py) — resolve um host e testa portas TCP indicadas. [Guia](legacy/host_diagnostics/README.md)
+- [`legacy/pulse_assistant/pulse_assistant.py`](legacy/pulse_assistant/pulse_assistant.py) — consulta clima e definições em serviços públicos. [Guia](legacy/pulse_assistant/README.md)
+- [`legacy/secure_passphrase/secure_passphrase.py`](legacy/secure_passphrase/secure_passphrase.py) — gera senhas e frases-senha localmente. [Guia](legacy/secure_passphrase/README.md)
+
+## Como usar
 
 Cada ferramenta explica o próprio uso. Rode:
 
@@ -37,10 +45,32 @@ Cada ferramenta explica o próprio uso. Rode:
 python3 caminho/do/programa.py --help
 ```
 
-As ferramentas usam a biblioteca padrão sempre que possível. A suíte de segurança lista suas dependências em `security/requirements.txt`.
+Os programas usam a biblioteca padrão sempre que possível. A suíte de segurança lista suas dependências em [`security/requirements.txt`](security/requirements.txt).
 
-## status
+## Plataformas públicas relacionadas
 
-O laboratório está vivo. Isso quer dizer que os programas funcionam agora e também que podem ganhar melhorias, correções e mais personalidade depois. Código aberto é obra em andamento — só não é desculpa para entregar obra inacabada.
+### Kachey — Music Vault
 
-Feito por **MIATSUNO**, com curiosidade, teimosia e café suficiente para assustar um clínico-geral.
+Para quem estuda, toca, consulta ou organiza referências musicais no navegador.
+
+Tutorial rápido em [kachey.neocities.org](https://kachey.neocities.org):
+
+1. Abra o Music Vault e escolha um álbum.
+2. Entre em uma música para ler os acordes e as notas disponíveis.
+3. Use o chord viewer para visualizar os acordes e o metronome para praticar o andamento.
+4. Aplique templates quando precisar de uma estrutura pronta.
+5. Exporte o material em `.txt` quando quiser guardar uma cópia simples.
+
+### Kayepad — BETA
+
+Para quem escreve, revisa e consulta textos em uma interface leve de navegador.
+
+Tutorial rápido em [kayepad.neocities.org](https://kayepad.neocities.org):
+
+1. Abra a entrada de escrita em [load.html](https://kayepad.neocities.org/load.html).
+2. Use Explore para navegar pelas entradas; a busca e os filtros ajudam a encontrar um texto.
+3. Consulte as anotações em [Kaynotes](https://kayepad.neocities.org/sc/notes).
+
+## Licença e uso
+
+Leia cada guia antes de usar uma ferramenta. Os programas fazem operações reais no computador ou na rede quando a documentação indica isso; escolha entradas e destinos apropriados e não forneça dados sensíveis a serviços públicos.
