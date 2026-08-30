@@ -28,12 +28,13 @@ def relative_name(path, root):
 
 
 def safe_relative(value):
-    if not isinstance(value, str) or not value or value.startswith("/"):
+    if not isinstance(value, str) or not value:
         raise ValueError(f"Unsafe archive path: {value!r}")
-    path = Path(value)
-    if path.is_absolute() or any(part in {"", ".", ".."} for part in path.parts):
+    normalized = value.replace("\\", "/")
+    path = Path(normalized)
+    if normalized.startswith("/") or path.is_absolute() or any(part in {"", ".", ".."} for part in normalized.split("/") + list(path.parts)):
         raise ValueError(f"Unsafe archive path: {value!r}")
-    return value.replace("\\", "/")
+    return normalized
 
 
 def matches_exclusion(relative, patterns):
