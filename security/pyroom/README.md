@@ -21,7 +21,7 @@ python3 -m pip install requests
 
 ## Basic commands
 
-The actual help is:
+The command-line interface is:
 
 ```text
 usage: security/pyroom.py [-h] [--checks CHECKS] [--timeout TIMEOUT]
@@ -42,11 +42,11 @@ python3 security/pyroom.py https://example.com
 python3 security/pyroom.py https://example.com --checks check_http_status,check_security_headers --timeout 5
 ```
 
-The help-listed flags are `--checks`, `--timeout`, and `--list`; `url` is optional only when `--list` is used. The current `--list` output includes 45 names, from `check_http_status` and `check_security_headers` through `check_hsts_preload`, `check_xss_protection`, and `check_vary_header`.
+The flags are `--checks`, `--timeout`, and `--list`; `url` is optional only when `--list` is used. The `--list` output contains 45 check names, from `check_http_status` and `check_security_headers` through `check_hsts_preload`, `check_xss_protection`, and `check_vary_header`.
 
 ## Input and output
 
-A target may be written with or without a scheme; missing schemes become `https://`. Each selected check makes a request (mostly `GET`; `check_options` and `check_http_methods` use `OPTIONS`). CORS/origin checks send the fixed probe origin `https://security.invalid`. The JSON result contains the normalized `url`, a `checks` array, and `passed`/`total` counts. Each check reports `ok`, status/final URL when available, and a compact `details` object.
+A target may be written with or without a scheme; missing schemes become `https://`. Each selected check makes a request (mostly `GET`; `check_options` and `check_http_methods` use `OPTIONS`). CORS/origin checks send the constant probe origin `https://security.invalid`. The JSON result contains the normalized `url`, a `checks` array, and `passed`/`total` counts. Each check reports `ok`, status/final URL when available, and a compact `details` object.
 
 A small selection returns JSON shaped like:
 
