@@ -39,4 +39,36 @@ Os projetos mantidos por compatibilidade ficam em `legacy/`, cada um em seu pró
 - [`legacy/column_fall/column_fall.py`](legacy/column_fall/column_fall.py) — jogo de combinações jogável no terminal. [Guia](legacy/column_fall/README.md)
 - [`legacy/local_toolbox/local_toolbox.py`](legacy/local_toolbox/local_toolbox.py) — hashes, estatísticas de arquivos, árvores de diretórios e JSON local. [Guia](legacy/local_toolbox/README.md)
 
-As releituras de legado são deliberadamente seguras: não reproduzem cracking, brute force, exploração, coleta de credenciais nem varredura ampla.
+## Plataformas públicas relacionadas
+
+### Kachey — Music Vault
+
+Para quem estuda, toca, consulta ou organiza referências musicais no navegador.
+
+Tutorial rápido em [kachey.neocities.org](https://kachey.neocities.org):
+
+1. Abra o Music Vault e escolha um álbum.
+2. Entre em uma música para ler os acordes e as notas disponíveis.
+3. Use o chord viewer para visualizar os acordes e o metronome para praticar o andamento.
+4. Aplique templates quando precisar de uma estrutura pronta.
+5. Exporte o material em `.txt` quando quiser guardar uma cópia simples.
+
+### Kayepad — BETA
+
+Para quem escreve, revisa e consulta textos em uma interface leve de navegador.
+
+Tutorial rápido em [kayepad.neocities.org](https://kayepad.neocities.org):
+
+1. Abra a entrada de escrita em [load.html](https://kayepad.neocities.org/load.html).
+2. Use Explore para navegar pelas entradas; a busca e os filtros ajudam a encontrar um texto.
+3. Consulte as anotações em [Kaynotes](https://kayepad.neocities.org/sc/notes).
+
+## Como usar
+
+Cada ferramenta explica o próprio uso. Rode:
+
+```bash
+python3 caminho/do/programa.py --help
+```
+
+Os programas usam a biblioteca padrão sempre que possível. A suíte de segurança lista suas dependências em [`security/requirements.txt`](security/requirements.txt).
