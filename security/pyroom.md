@@ -1,6 +1,6 @@
-# pychaos_safe
+# pyroom
 
-`pychaos_safe` is a read-only HTTP reconnaissance checklist for a target you own or are explicitly allowed to test. It runs named probes and prints JSON, covering status, headers, common documents, CORS signals, methods, and other defensive observations. Despite the playful name, it is deliberately not an exploit tool.
+`pyroom` is a read-only HTTP reconnaissance checklist for a target you own or are explicitly allowed to test. It runs named probes and prints JSON, covering status, headers, common documents, CORS signals, methods, and other defensive observations. Despite the playful name, it is deliberately not an exploit tool.
 
 ## Prerequisites and installation
 
@@ -24,7 +24,7 @@ python3 -m pip install requests
 The actual help is:
 
 ```text
-usage: security/pychaos_safe.py [-h] [--checks CHECKS] [--timeout TIMEOUT]
+usage: security/pyroom.py [-h] [--checks CHECKS] [--timeout TIMEOUT]
                                 [--list]
                                 [url]
 ```
@@ -32,14 +32,14 @@ usage: security/pychaos_safe.py [-h] [--checks CHECKS] [--timeout TIMEOUT]
 List the available check names before selecting any:
 
 ```bash
-python3 security/pychaos_safe.py --list
+python3 security/pyroom.py --list
 ```
 
 Run every check against an authorized endpoint, or choose a comma-separated subset:
 
 ```bash
-python3 security/pychaos_safe.py https://example.com
-python3 security/pychaos_safe.py https://example.com --checks check_http_status,check_security_headers --timeout 5
+python3 security/pyroom.py https://example.com
+python3 security/pyroom.py https://example.com --checks check_http_status,check_security_headers --timeout 5
 ```
 
 The help-listed flags are `--checks`, `--timeout`, and `--list`; `url` is optional only when `--list` is used. The current `--list` output includes 45 names, from `check_http_status` and `check_security_headers` through `check_hsts_preload`, `check_xss_protection`, and `check_vary_header`.
@@ -70,6 +70,6 @@ Only run it against systems you are authorized to assess. It performs real HTTP 
 ## Troubleshooting
 
 - **`a target URL is required`:** provide a URL unless you only want `--list`.
-- **`unknown checks`:** copy names exactly from `python3 security/pychaos_safe.py --list`, separated by commas.
+- **`unknown checks`:** copy names exactly from `python3 security/pyroom.py --list`, separated by commas.
 - **Timeouts or many failed checks:** reduce the scope with `--checks`, increase `--timeout` carefully, and verify the target is reachable.
 - **`requests` import error:** install it in the active virtual environment.
