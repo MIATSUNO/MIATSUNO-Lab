@@ -14,7 +14,7 @@ Cada entrada abaixo liga ao código e ao README correspondente. Os caminhos dos 
 
 - [`security/header_guard.py`](security/header_guard.py) — confere cabeçalhos, cookies e redirecionamentos HTTP. [Guia](security/header_guard/README.md)
 - [`security/dependency_lens.py`](security/dependency_lens.py) — consulta o OSV para dependências locais. [Guia](security/dependency_lens/README.md)
-- [`security/pyroom.py`](security/pyroom.py) — executa 45 verificações HTTP somente de leitura, incluindo cabeçalhos, DNS, RDAP, certificados e documentos públicos. [Guia](security/pyroom/README.md)
+- [`security/pyroom.py`](security/pyroom.py) — executa 45 verificações HTTP somente de leitura, incluindo status, cabeçalhos, documentos públicos, CORS e métodos. [Guia](security/pyroom/README.md)
 
 Use as ferramentas de segurança apenas em sistemas e domínios próprios ou autorizados. Elas não fazem brute force, exploração, invasão, coleta de credenciais ou escrita de dados.
 
