@@ -14,7 +14,7 @@ A regra da casa é simples: se o programa diz que fez alguma coisa, ele faz mesm
 
 - `security/header_guard.py` confere cabeçalhos, cookies, redirecionamentos e sinais básicos de configuração HTTP.
 - `security/dependency_lens.py` consulta o OSV para procurar vulnerabilidades conhecidas nas dependências locais.
-- `security/pychaos_safe.py` é a suíte de diagnóstico estilo PyChaos: 45 funções reais de coleta pública, DNS, HTTP, RDAP, certificados, APIs abertas e checagens de superfície. Use somente em sistemas e domínios que você possui ou tem autorização para testar.
+- `security/pyroom.py` é a suíte de diagnóstico estilo Pyroom: 45 funções reais de coleta pública, DNS, HTTP, RDAP, certificados, APIs abertas e checagens de superfície. Use somente em sistemas e domínios que você possui ou tem autorização para testar.
 
 Não tem brute force, exploração, invasão, coleta de credenciais ou varredura irresponsável. Segurança boa não precisa fazer cosplay de vilão de filme ruim.
 
