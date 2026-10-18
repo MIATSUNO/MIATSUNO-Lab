@@ -60,7 +60,7 @@ Para quem escreve, revisa e consulta textos em uma interface leve de navegador.
 
 Tutorial rápido em [kayepad.neocities.org](https://kayepad.neocities.org):
 
-1. Abra a entrada de escrita em [load.html](https://kayepad.neocities.org/load.html).
+1. Abra a Kaye em [Kayepad](https://kayepad.neocities.org/).
 2. Use Explore para navegar pelas entradas; a busca e os filtros ajudam a encontrar um texto.
 3. Consulte as anotações em [Kaynotes](https://kayepad.neocities.org/sc/notes).
 
