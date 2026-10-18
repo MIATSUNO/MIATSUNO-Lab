@@ -8,6 +8,7 @@ Cada entrada abaixo liga ao código e ao README correspondente. Os caminhos dos 
 
 - [`automation/file_sift.py`](automation/file_sift.py) — organiza arquivos com simulação, manifesto e opção de desfazer. [Guia](automation/file_sift/README.md)
 - [`automation/site_watch.py`](automation/site_watch.py) — acompanha páginas HTTP(S), guarda estado e detecta mudanças. [Guia](automation/site_watch/README.md)
+- [`automation/lookay/lookay.py`](automation/lookay/lookay.py) — consulta a Veristante, cria JSONs compatíveis com a Kayepad e acompanha páginas no Termux. [Guia](automation/lookay/README.md)
 - [`automation/backup_buddy.py`](automation/backup_buddy.py) — cria backups ZIP incrementais e verifica os arquivos. [Guia](automation/backup_buddy/README.md)
 
 ## Segurança defensiva
